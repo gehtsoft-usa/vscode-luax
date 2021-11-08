@@ -250,6 +250,9 @@
 					"include": "#if-block"
 				},
 				{
+					"include": "#try-block"
+				},
+				{
 					"include": "#for-block"
 				},
 				{
@@ -430,6 +433,26 @@
 				}
 			]
 		},
+		"try-block": {
+			"name": "meta.try-block.lua meta.block.lua",
+			"begin": "\\btry\\b",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.lua"
+				}
+			},
+			"end": "\\bend\\b",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.lua"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#general"
+				}
+			]
+		},
 		"for-block": {
 			"name": "meta.for-block.lua meta.block.lua",
 			"begin": "\\bfor\\b",
@@ -500,7 +523,7 @@
 		},
 		"keyword": {
 			"name": "keyword.control.lua",
-			"match": "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|local|in)\\b"
+			"match": "\\b(throw|try|catch|break|do|else|for|if|elseif|return|then|repeat|while|until|end|local|in)\\b"
 		},
 		"class-definition": {
 			"name": "meta.class.lua",
