@@ -124,7 +124,7 @@
 		},
 		"var-decl-in-func": {
 			"name": "meta.property.lua",
-			"begin": "\\b(var)",
+			"begin": "\\b(var)\\s+",
 			"beginCaptures": {
 				"1": {
 					"name": "storage.type.var.lua"
