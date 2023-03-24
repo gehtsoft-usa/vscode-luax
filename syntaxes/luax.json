@@ -1,5 +1,5 @@
 {
-	"comment": "Luax Syntax: version 1.1.1",
+	"comment": "Luax Syntax: version 1.1.2",
 	"fileTypes": [
 		"luax"
 	],
@@ -45,7 +45,10 @@
 				},
 				{
 					"include": "#const-decl"
-				}
+				},
+                                {
+                                         "include": "#class-definition"
+                                }
 			]
 		},
 		"attribute": {
@@ -527,7 +530,7 @@
 		},
 		"class-definition": {
 			"name": "meta.class.lua",
-			"begin": "\\b(class)\\s+([_[:alpha:]][_[:alnum:]]*)(\\s+(:)\\s+([_[:alpha:]][_[:alnum:]]*))?",
+			"begin": "\\b(class)\\s+([_[:alpha:]][_[:alnum:]]*)(\\s*(:)\\s*([_[:alpha:]][_[:alnum:]]*))?",
 			"end": "\\bend\\b",
 			"beginCaptures": {
 				"1": {
